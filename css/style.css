@@ -1,0 +1,261 @@
+:root {
+  --maxw: 44rem;
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --text: #1b1b1d;
+  --muted: #5c6370;
+  --accent: #2a5d8f;
+  --accent-hover: #1f4b73;
+  --border: #e6e8ec;
+  --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --surface: #171a21;
+    --text: #e9eaec;
+    --muted: #9aa3b2;
+    --accent: #6fb1e6;
+    --accent-hover: #9ccbf0;
+    --border: #262a33;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Profile header ---------- */
+.profile {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 132px;
+  height: 132px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.profile-intro h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2.1rem;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.96rem;
+}
+
+.links li {
+  position: relative;
+}
+
+.links li + li::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  margin-top: -1px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.5;
+}
+
+/* ---------- Sections ---------- */
+section {
+  margin-top: 2.75rem;
+}
+
+.about p {
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- Papers ---------- */
+.paper {
+  margin-bottom: 1.7rem;
+}
+
+.paper:last-child {
+  margin-bottom: 0;
+}
+
+.paper h3 {
+  font-size: 1.14rem;
+  margin: 0 0 0.3rem;
+  font-weight: 600;
+}
+
+.paper h3 a {
+  color: var(--text);
+}
+
+.paper h3 a:hover {
+  color: var(--accent);
+}
+
+.paper h3 .paper-link {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-left: 0.45rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.paper h3 .paper-link:hover {
+  color: var(--accent-hover);
+}
+
+.paper-meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.paper-meta .sep {
+  margin: 0 0.35rem;
+  opacity: 0.55;
+}
+
+.paper-meta a {
+  white-space: nowrap;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.08rem 0.6rem;
+}
+
+details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.9rem;
+  list-style: none;
+  width: max-content;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+details p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .container {
+    padding-top: 3rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem;
+  }
+
+  .profile-intro h1 {
+    font-size: 1.8rem;
+  }
+}

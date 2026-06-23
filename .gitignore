@@ -1,0 +1,6 @@
+# Source photo (published copy lives in assets/profile.jpg)
+profpic.jpg
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

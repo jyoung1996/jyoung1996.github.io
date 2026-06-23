@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Justin Young</title>
+  <meta name="description" content="Justin Young — Senior Researcher at Microsoft, Office of the Chief Economist, working at the intersection of machine learning and causal inference." />
+  <meta name="author" content="Justin Young" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Justin Young" />
+  <meta property="og:description" content="Senior Researcher at Microsoft, Office of the Chief Economist, working at the intersection of machine learning and causal inference." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+
+    <header class="profile">
+      <img class="avatar" src="assets/profile.jpg" alt="Portrait of Justin Young"
+           onerror="this.onerror=null;this.src='assets/profile-placeholder.svg';" />
+      <div class="profile-intro">
+        <h1>Justin Young</h1>
+        <p class="tagline">Microsoft, Office of the Chief Economist</p>
+        <ul class="links">
+          <li><a id="email-link" href="#" rel="nofollow">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/justin-young-a62532233/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <!-- To add more, copy a line above, e.g.:
+          <li><a href="https://scholar.google.com/..." target="_blank" rel="noopener">Google Scholar</a></li>
+          -->
+        </ul>
+      </div>
+    </header>
+
+    <section class="about" aria-label="About">
+      <p>
+        I am a <a href="https://www.microsoft.com/en-us/research/people/youngjustin/" target="_blank" rel="noopener">Senior Researcher at Microsoft</a>,
+        in the Office of the Chief Economist. My research lies broadly at the intersection of
+        machine learning and causal inference.
+      </p>
+      <p>
+        Previously, I completed my PhD at Stanford University in 2025 in econometrics with a
+        minor in Computer Science, advised by Guido Imbens. During my time at Stanford, I
+        had the honor of being part of
+        <a href="https://datascience.stanford.edu/people/justin-young" target="_blank" rel="noopener">Stanford Data Science</a>.
+        I also contributed to the textbook
+        <a href="https://causalml-book.org/" target="_blank" rel="noopener"><em>Applied Causal Inference Powered by ML and AI</em></a>.
+      </p>
+      <p>
+        I earned my bachelor's degree at Yale University in 2018, where I studied
+        mathematics and music.
+      </p>
+    </section>
+
+    <section class="papers" aria-label="Working papers">
+      <h2>Working Papers</h2>
+
+      <article class="paper">
+        <h3>
+          <a href="https://arxiv.org/abs/2601.11845" target="_blank" rel="noopener">Reevaluating Causal Estimation Methods with Data from a Product Release</a>
+          <a class="paper-link" href="https://arxiv.org/abs/2601.11845" target="_blank" rel="noopener">[paper]</a>
+        </h3>
+        <p class="paper-meta">
+          <span class="venue">Presented at IAAE 2026, COMPIE 2026. In submission.</span>
+        </p>
+        <details class="abstract">
+          <summary>[abstract]</summary>
+          <p>
+            Recent developments in causal machine learning methods have made it easier to
+            estimate flexible relationships between confounders, treatments and outcomes,
+            making unconfoundedness assumptions in causal analysis more palatable. How
+            successful are these approaches in recovering ground truth baselines? In this
+            paper we analyze a new data sample including an experimental rollout of a new
+            feature at a large technology company and a simultaneous sample of users who
+            endogenously opted into the feature. We find that recovering ground truth causal
+            effects is feasible&nbsp;&mdash;&nbsp;but only with careful modeling choices. Our
+            results build on the observational causal literature beginning with LaLonde
+            (1986), offering best practices for more credible treatment effect estimation in
+            modern, high-dimensional datasets.
+          </p>
+        </details>
+      </article>
+
+      <article class="paper">
+        <h3>
+          <a href="https://arxiv.org/abs/2208.03489" target="_blank" rel="noopener">Forecasting Algorithms for Causal Inference with Panel Data</a>
+          <a class="paper-link" href="https://arxiv.org/abs/2208.03489" target="_blank" rel="noopener">[paper]</a>
+        </h3>
+        <p class="paper-meta">
+          <span class="venue">Presented at NBER SI 2023, EC 2024. Submitted.</span>
+        </p>
+        <details class="abstract">
+          <summary>[abstract]</summary>
+          <p>
+            Conducting causal inference with panel data is a core challenge in social science
+            research. We adapt a deep neural architecture for time series forecasting (the
+            N-BEATS algorithm) to more accurately impute the counterfactual evolution of a
+            treated unit had treatment not occurred. Across a range of settings, the resulting
+            estimator (&ldquo;SyNBEATS&rdquo;) significantly outperforms commonly employed
+            methods (synthetic controls, two-way fixed effects), and attains comparable or
+            more accurate performance compared to recently proposed methods (synthetic
+            difference-in-differences, matrix completion). An implementation of this estimator
+            is available for public use. Our results highlight how advances in the forecasting
+            literature can be harnessed to improve causal inference in panel data settings.
+          </p>
+        </details>
+      </article>
+
+      <article class="paper">
+        <h3>A Two-Step Procedure Using GANs for Panel Simulations</h3>
+        <p class="paper-meta">
+          <span class="tag">Draft available upon request</span>
+        </p>
+        <details class="abstract">
+          <summary>[abstract]</summary>
+          <p>
+            This paper introduces a two-step Generative Adversarial Network (GAN) approach for
+            creating realistic synthetic panel data to evaluate causal panel estimators,
+            extending prior work by Athey et al. (2024). While Monte Carlo simulations are the
+            standard tool for assessing estimator performance, traditional simulation designs
+            often rely on overly simplistic data-generating processes that fail to capture the
+            complex structure of real-world panel data. We develop a novel approach that
+            combines Wasserstein GANs with Long Short-Term Memory networks to learn and
+            reproduce both cross-sectional heterogeneity and temporal dependencies inherent in
+            panel data. Our two-step approach first implicitly learns the distribution of unit
+            fixed effects, then learns the distribution of the remaining residuals conditional
+            on the draw of the distribution in the first step. We apply this method to three
+            canonical applications in the synthetic control literature: West Germany's economic
+            performance, California's Proposition 99, and Basque terrorism. Our synthetic panels
+            successfully pass both visual and statistical validation checks, despite the small
+            sample sizes typical in these applications. Benchmarking multiple causal estimators
+            on these realistic synthetic panels reveals promising results, though with moderate
+            variation across datasets and estimators. These findings demonstrate that GAN-based
+            approaches can effectively learn panel data distributions even with limited
+            observations, offering researchers a more empirically grounded framework for
+            evaluating the finite-sample properties of causal estimators in panel settings.
+          </p>
+        </details>
+      </article>
+    </section>
+
+    <footer>
+      <span>CV available upon request</span>
+    </footer>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
